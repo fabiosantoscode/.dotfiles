@@ -1,3 +1,5 @@
+export TERM=xterm-256color
+
 # aliases
 alias :q=exit
 alias :wq=exit
@@ -26,11 +28,3 @@ function rebasepush {
         git stash pop
 }
 
-alias clojure="java -cp /home/fabio/clojure/clojure-1.7.0.jar clojure.main"
-
-# Chmod
-alias -- +x='chmod +x'
-
-alias nodedoc="xdg-open /usr/share/doc/nodejs/api/index.html"
-
-export PATH=$PATH:~/android-sdk-linux/tools
