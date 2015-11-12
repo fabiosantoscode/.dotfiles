@@ -1,0 +1,6 @@
+splitw -v -p 30
+send-keys "cd ~/CloudPT/sapo/widgets-2014 && firefox http://localhost:4567 & psrv 4567" C-m
+
+selectp -t 0
+send-keys "meocloud start & cd ~/CloudPT/sapo/widgets-2014" C-m
+

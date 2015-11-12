@@ -1,0 +1,14 @@
+# C-b C-G
+
+# Split off the bottom, which is shorter
+splitw -v -p 30
+send-keys "cd ~/devel/gh-pages && ./build.sh; ./live.sh" C-m
+
+splitw -h -p 66
+send-keys "cd ~/devel/Ink/src/js/ && ./autocopy.sh" C-m
+
+splitw -h -p 50
+send-keys "cd ~/devel/gh-pages/_site && psrv 4000" C-m
+
+selectp -t 0
+send-keys "cd ~/devel/gh-pages && amaze && wow" C-m

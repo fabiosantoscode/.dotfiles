@@ -1,0 +1,28 @@
+[global_config]
+[keybindings]
+  cycle_prev = None
+  go_up = <Primary>Up
+  move_tab_right = None
+  next_tab = <Primary>Tab
+  go_prev = None
+  prev_tab = <Primary><Shift>Tab
+  go_down = <Primary>Down
+  cycle_next = None
+  move_tab_left = None
+  go_right = <Primary>Right
+  new_tab = <Primary>t
+  go_left = <Primary>Left
+  go_next = None
+[profiles]
+  [[default]]
+    background_image = None
+[layouts]
+  [[default]]
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+      profile = default
+    [[[window0]]]
+      type = Window
+      parent = ""
+[plugins]
