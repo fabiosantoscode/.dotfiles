@@ -1,5 +1,3 @@
-export TERM=xterm-256color
-
 # aliases
 alias :q=exit
 alias :wq=exit
@@ -27,4 +25,6 @@ function rebasepush {
         git push $1 $2 &&
         git stash pop
 }
+
+PS1="\u@\h\e[1;31m\] ♥ \[\e[0m\] "
 
