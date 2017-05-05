@@ -1,7 +1,7 @@
 # aliases
 alias :q=exit
 alias :wq=exit
-alias :w="touch touchingstuff123 && rm -f touchingstuff123"
+alias :w="touch touchingstuff123.js && rm -f touchingstuff123.js"
 alias psrv="python2 -m SimpleHTTPServer"
 alias mcurl='curl -H "User-Agent: Mozilla/5.0 (Android 4.4; Mobile; rv:41.0) Gecko/41.0 Firefox/41.0"'
 
@@ -31,7 +31,11 @@ function rebasepush {
         git stash pop
 }
 
-PS1="\u@\h\e[1;31m\] ♥ \[\e[0m\] "
+#PS1="\u@\h\e[1;31m\] ♥ \[\e[0m\] "
+PS1="\u@\h ♥  "
 
-export PATH="./node_modules/.bin:$PATH"
+# https://gist.github.com/namuol/9122237#gistcomment-1179163
+function flip() {
+  perl -C3 -Mutf8 -lpe '$_=reverse;y/a-zA-Z.['\'',({?!\"<_;‿⁅∴\r/ɐqɔpǝɟƃɥıɾʞ|ɯuodbɹsʇnʌʍxʎzɐqɔpǝɟƃɥıɾʞ|ɯuodbɹsʇnʌʍxʎz˙],'\'')}¿¡,>‾؛⁀⁆∵\n/' <<< "$1"
+}
 

@@ -1,5 +1,5 @@
 
 # hosts
-export DIGITALOCEAN=178.62.78.117
+export DIGITALOCEAN=139.59.189.9
 alias digitalocean="ssh root@$DIGITALOCEAN"
 
