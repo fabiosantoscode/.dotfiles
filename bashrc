@@ -41,3 +41,5 @@ function flip() {
 
 export BROWSER=firefox
 
+export VISUAL=vim
+
