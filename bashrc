@@ -31,8 +31,14 @@ function rebasepush {
         git stash pop
 }
 
+function __get_aws_info {
+    if [[ -n "${AWS_ACCOUNT_INFO}" ]]; then
+        echo "$AWS_ACCOUNT_INFO "
+    fi
+}
+
 #PS1="\u@\h\e[1;31m\] ♥ \[\e[0m\] "
-PS1="\u@\h ♥  "
+PS1="\$(__get_aws_info)\u@\h ♥  "
 
 # https://gist.github.com/namuol/9122237#gistcomment-1179163
 function flip() {
