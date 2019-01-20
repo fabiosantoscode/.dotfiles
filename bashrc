@@ -19,7 +19,7 @@ alias nom=npm
 
 # actually useful
 alias glog="git log --all --pretty='format:%d %Cgreen%h%Creset %an - %s' --graph"
-alias wow='git status || hg status || svn status' 
+alias wow='git status' 
 alias lel=reset
 alias npmt='npm t'
 
@@ -49,3 +49,19 @@ export BROWSER=firefox
 
 export VISUAL=vim
 
+MEO_ROUTER_PASSWORD=meo
+
+# Node env to development, production is override
+export NODE_ENV=development
+
+# ??? nvm wtf
+export CURL_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
+
+# terser dev mode
+export TERSER_NO_BUNDLE=1
+
+export NODE_ENV=development
+
+function rgrep {
+    grep -R "$2" "$1"
+}
