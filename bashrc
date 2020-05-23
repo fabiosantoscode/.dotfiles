@@ -1,35 +1,19 @@
-# aliases
+# vim aliases
 alias :q=exit
-alias :wq=exit
+alias :wq="touch touchingstuff123.js && exit"
 alias :w="touch touchingstuff123.js && rm -f touchingstuff123.js"
-alias psrv="python2 -m SimpleHTTPServer"
-alias mcurl='curl -H "User-Agent: Mozilla/5.0 (Android 4.4; Mobile; rv:41.0) Gecko/41.0 Firefox/41.0"'
 
 # defaults
 alias watch="watch --color"
 
-## doge
-alias such=git
-alias very=git
-alias much=git
-alias shibe=git
-
-## amaze!
-alias nom=npm
-
 # actually useful
 alias glog="git log --all --pretty='format:%d %Cgreen%h%Creset %an - %s' --graph"
-alias wow='git status' 
-alias lel=reset
+alias wow='git status'
 alias npmt='npm t'
+alias k=kubectl
 
-function rebasepush {
-    git stash save &&
-        git fetch $1 $2 &&
-        git rebase $1/$2 &&
-        git push $1 $2 &&
-        git stash pop
-}
+# Less with colors!
+alias less='less -R'
 
 function __get_aws_info {
     if [[ -n "${AWS_ACCOUNT_INFO}" ]]; then
@@ -38,7 +22,11 @@ function __get_aws_info {
 }
 
 #PS1="\u@\h\e[1;31m\] ♥ \[\e[0m\] "
-PS1="\$(__get_aws_info)\u@\h ♥  "
+if [ "$(whoami)" == "root" ]; then
+    PS1="\$(__get_aws_info)\u # "
+else
+    PS1="\$(__get_aws_info)\u@\h ♥  "
+fi
 
 # https://gist.github.com/namuol/9122237#gistcomment-1179163
 function flip() {
@@ -48,8 +36,6 @@ function flip() {
 export BROWSER=firefox
 
 export VISUAL=vim
-
-MEO_ROUTER_PASSWORD=meo
 
 # Node env to development, production is override
 export NODE_ENV=development
