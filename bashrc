@@ -11,6 +11,7 @@ alias glog="git log --all --pretty='format:%d %Cgreen%h%Creset %an - %s' --graph
 alias wow='git status'
 alias npmt='npm t'
 alias k=kubectl
+alias hedxump="hexdump -C"
 
 # Less with colors!
 alias less='less -R'
@@ -33,19 +34,15 @@ function flip() {
   perl -C3 -Mutf8 -lpe '$_=reverse;y/a-zA-Z.['\'',({?!\"<_;‿⁅∴\r/ɐqɔpǝɟƃɥıɾʞ|ɯuodbɹsʇnʌʍxʎzɐqɔpǝɟƃɥıɾʞ|ɯuodbɹsʇnʌʍxʎz˙],'\'')}¿¡,>‾؛⁀⁆∵\n/' <<< "$1"
 }
 
+if [[ -n "${FABIO_SAYS_VENV:-}" ]]; then
+    . $FABIO_SAYS_VENV/bin/activate
+fi
+
 export BROWSER=firefox
 
 export VISUAL=vim
 
 # Node env to development, production is override
-export NODE_ENV=development
-
-# ??? nvm wtf
-export CURL_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
-
-# terser dev mode
-export TERSER_NO_BUNDLE=1
-
 export NODE_ENV=development
 
 function rgrep {
