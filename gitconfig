@@ -7,3 +7,5 @@
 	insteadOf = https://github.com/
 [tag]
     sort = version:refname
+[diff]
+	tool = meld
