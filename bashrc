@@ -19,6 +19,10 @@ alias less='less -R'
 function __get_aws_info {
     if [[ -n "${AWS_ACCOUNT_INFO}" ]]; then
         echo "$AWS_ACCOUNT_INFO "
+    else
+        if [[ -n "${IN_NIX_SHELL}" ]]; then
+            echo nix-shell
+        fi
     fi
 }
 
@@ -41,6 +45,8 @@ fi
 export BROWSER=firefox
 
 export VISUAL=vim
+
+export TERM='xterm-256color'
 
 # Node env to development, production is override
 export NODE_ENV=development
